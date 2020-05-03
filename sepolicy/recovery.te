@@ -1,0 +1,24 @@
+recovery_only(`
+  allow recovery ctl_rildaemon_prop:property_service set;
+  allow recovery device:dir rw_dir_perms;
+  allow recovery rootfs:dir {rw_dir_perms write add_name create} ;
+ # allow recovery rootfs:file create_file_perms;
+  allow recovery sysfs_devices_system_cpu:file rw_file_perms;
+ # allow recovery self:capability mknod;
+  allow recovery usbfs:dir rw_dir_perms;
+ # allow recovery device:chr_file create_file_perms;
+ allow recovery selinuxfs:file write;
+ #allow recovery kernel:security setenforce;
+ #allow recovery default_prop:property_service set;
+ allow recovery media_rw_data_file:dir {getattr search};
+ allow recovery resourcecache_data_file:dir {getattr read open};
+ allow recovery drm_data_file:dir {getattr read open};
+ allow recovery anr_data_file:dir {getattr read open};
+ allow recovery anr_data_file:file getattr;
+ allow recovery system_radio_prop:property_service set;
+ allow recovery devpts:chr_file {read write open ioctl getattr};
+ allow recovery mtp_device:chr_file ioctl;
+ #allow recovery media_rw_data_file:dir {write remove_name};
+ #allow recovery media_rw_data_file:file unlink;
+')
+

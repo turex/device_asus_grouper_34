@@ -1,0 +1,2 @@
+allow system_app radio_data_file:dir getattr;
+#allow system_app netd_service:service_manager find;

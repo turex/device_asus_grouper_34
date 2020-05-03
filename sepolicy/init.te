@@ -1,0 +1,15 @@
+# Allow creating /sdcard symlinks
+allow init tmpfs:lnk_file create_file_perms;
+
+# Allow writing GPS GPIO direction and value
+allow init sysfs_gps_writable:file write;
+
+# Allow debugfs to mount
+allow init debugfs:dir mounton;
+
+# Allow mounting /per
+allow init oemfs:dir mounton;
+
+#allow init system_file:dir relabelfrom;
+#allow init system_file:file relabelfrom;
+#allow init kernel:security setenforce;

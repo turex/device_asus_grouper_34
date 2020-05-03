@@ -1,0 +1,9 @@
+# Set default LCD density to TVDPI
+ro.sf.lcd_density=213
+
+# Wi-Fi
+wifi.interface=wlan0
+
+# Configure PRISM, but disable it by default
+persist.tegra.didim.video=5
+persist.tegra.didim.enable=0

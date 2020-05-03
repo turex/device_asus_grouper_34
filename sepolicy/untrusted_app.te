@@ -1,0 +1,6 @@
+allow untrusted_app sysfs:dir read; 
+allow untrusted_app sysfs:file read; 
+
+#allow untrusted_app kernel:system syslog_read; 
+
+
